@@ -1,0 +1,397 @@
+/* =========================
+   COLOR PALETTE
+========================= */
+:root {
+  --primary-green: #2ecc71;
+  --accent-blue: #3498db;
+  --soft-white: #fafafa;
+  --dark-gray: #2c3e50;
+  --light-gray: #ecf0f1;
+}
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--soft-white);
+  color: var(--dark-gray);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--soft-white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo img {
+  max-width: 130px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark-gray);
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-blue);
+  transform: scale(1.05);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--soft-white);
+}
+
+.hero-content {
+  max-width: 700px;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--primary-green);
+  color: var(--soft-white);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--accent-blue);
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+.about {
+  padding: 4rem 2rem;
+  background-color: var(--light-gray);
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: var(--primary-green);
+  margin-bottom: 1.5rem;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 1rem auto;
+  font-size: 1.1rem;
+}
+
+/* =========================
+   VISION & MISSION
+========================= */
+#vision-mission {
+  background-color: var(--soft-white);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#vision-mission h2 {
+  font-size: 2.5rem;
+  color: var(--primary-green);
+}
+
+.vision-mission-content {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.vision-mission-content div {
+  flex: 1;
+}
+
+/* =========================
+   THEMATIC AREAS
+========================= */
+#thematic-areas {
+  background-color: var(--light-gray);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#thematic-areas h2 {
+  font-size: 2.5rem;
+  color: var(--primary-green);
+}
+
+#thematic-areas ul {
+  list-style: none;
+  max-width: 700px;
+  margin: 2rem auto;
+  text-align: left;
+}
+
+#thematic-areas li {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+#projects-executed {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#projects-executed h2 {
+  font-size: 2.5rem;
+  color: var(--primary-green);
+}
+
+#projects-executed ul {
+  list-style: none;
+  max-width: 700px;
+  margin: 2rem auto;
+  text-align: left;
+}
+
+#projects-executed li {
+  margin: 1rem 0;
+}
+
+/* =========================
+   SLIDESHOW
+========================= */
+.slideshow {
+  padding: 4rem 2rem;
+  background-color: var(--light-gray);
+  text-align: center;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.active {
+  background-color: var(--primary-green);
+}
+
+/* =========================
+   IMPACT HIGHLIGHT
+========================= */
+.impact-highlight {
+  padding: 4rem 2rem;
+  background-color: #f4f9f4;
+  text-align: center;
+}
+
+.impact-highlight h2 {
+  font-size: 2.4rem;
+  color: var(--primary-green);
+  margin-bottom: 1.2rem;
+}
+
+.impact-highlight p {
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Program gallery */
+.impact-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.impact-gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.impact-gallery img:hover {
+  transform: scale(1.04);
+}
+
+
+
+
+
+
+
+/* =========================
+   MEET THE TEAM
+========================= */
+.team {
+  padding: 4rem 2rem;
+  background-color: var(--light-gray);
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 2.5rem;
+  color: var(--primary-green);
+}
+
+.team-intro {
+  max-width: 700px;
+  margin: 1rem auto 3rem;
+  font-size: 1.1rem;
+}
+
+/* Horizontal layout */
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
+
+/* Team card */
+.team-member {
+  background: var(--soft-white);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 260px; /* fixed width for horizontal alignment */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Image sizing */
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid var(--primary-green);
+}
+
+.team-member h3 {
+  font-size: 1.2rem;
+}
+
+.team-member .role {
+  color: var(--accent-blue);
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+#contact {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  color: var(--primary-green);
+}
+
+#contact p {
+  font-size: 1.1rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background-color: var(--dark-gray);
+  color: var(--soft-white);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member img {
+    width: 95px;
+    height: 95px;
+  }
+}
+
+
